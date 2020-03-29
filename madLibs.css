@@ -1,0 +1,93 @@
+/* Main stylings */
+			
+				body, html {
+					margin-left:0px;
+					margin-right:0px;
+					margin-bottom:0px;
+					margin-top:0px;
+					background: linear-gradient(to right, #2FCFC3 0%,#2FCFC3 50%,#FF6600 50%,#FF6600 100%);
+					font-family: 'Mansalva', cursive;
+					}
+			
+				h1 {
+					color: white;
+					font-size: 2rem;
+					font-family: 'Barriecito', cursive;
+					margin: 0;
+					padding: 0;
+					}
+					
+				.formText {
+					color: grey;
+					}
+				
+				.bold {
+					font-weight: bold;
+					}
+					
+				.textInput{
+					padding: 2px;
+					border: black solid 1px;
+					border-radius: 5px;
+					box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
+					}
+					
+						
+				a {
+					color: white;
+					}
+					
+				#wrapper {
+					display: grid; 
+					grid-template-columns: 1fr 1fr;
+					justify-content: space-around;
+					text-align: center;
+				}
+		
+			/* Div Stylings */
+				
+				#title {
+					background-color:black;
+					height: 50px;
+					text-align: center;
+					padding:40px;
+					}
+					
+				#tableOne {
+					margin: auto;
+				}
+												
+					
+					
+			/* Footer Stylings */
+					
+				#footer {
+					height: 35px;
+					text-align: center;
+					position: fixed;
+					bottom:0px;
+					width: 100%;
+					background: repeating-linear-gradient(45deg, #433F40,  #141518 20px, #433F40 20px, #141518 40px);
+				}
+				
+			/* Media Query for phones */	
+			
+				@media only screen and (max-width:700px) {
+				html {
+					background: #FF6600;
+				}
+				
+				#form {
+					background: #2FCFC3;
+				}
+				
+				#madLibsText {
+					background: #FF6600;
+				}
+					
+				#wrapper {
+					grid-template-columns: 1fr;
+					grid-template-rows: auto auto;
+				}	
+					
+				}
