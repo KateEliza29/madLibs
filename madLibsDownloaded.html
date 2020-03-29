@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head> 
+	<link href="https://fonts.googleapis.com/css?family=Barriecito|Mansalva&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+	
+		<title> MadLibs! </title> 
+
+		<style type="text/css">
+		
+		
+
+		
+			/* Main stylings */
+			
+				body, html {
+					margin-left:0px;
+					margin-right:0px;
+					margin-bottom:0px;
+					margin-top:0px;
+					background: linear-gradient(to right, #2FCFC3 0%,#2FCFC3 50%,#FF6600 50%,#FF6600 100%);
+					}
+			
+				.headingText {
+					color: white;
+					font-size: 200%;
+					font-family: 'Barriecito', cursive;
+					}
+					
+				.formText {
+					color: grey;
+					}
+				
+				.bold {
+					font-weight: bold;
+					}
+					
+				.textInput{
+					padding: 2px;
+					border: black solid 1px;
+					border-radius: 5px;
+					box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
+					}
+					
+				.mainText {
+					font-family: 'Mansalva', cursive;
+					}
+					
+				.footerText {
+					color: white;
+					font-family: 'Mansalva', cursive;
+					}
+					
+				a {
+					color: #2FCFC3; 
+					}
+		
+			/* Div Stylings */
+			
+				#title {
+					background-color:black;
+					height: 50px;
+					text-align: center;
+					padding:40px;
+					}
+					
+				#form {
+					text-align: center;
+					float: left;
+					width: 50%;
+					padding: 10px;
+					}
+					
+				#tableOne {
+					margin-left:20%;
+					margin-right:20%;
+					padding: 10px;
+					}
+			
+					
+				#madlibsText {
+					text-align: center;
+					width:50%;
+					padding: 10px;
+					}
+					
+			/* Footer Stylings */
+					
+				#footer {
+					height: auto;
+					text-align: center;
+					position: absolute;
+					bottom:0px;
+					width: 100%;
+					background: repeating-linear-gradient(45deg, #433F40,  #141518 20px, #433F40 20px, #141518 40px);
+				}
+					
+				
+		
+		</style>
+	
+	</head>
+	
+	
+	<body>
+
+		<header>
+			<div id="title">
+				<p class="headingText">MadLibs - Party Invitation </p>
+			</div>
+		</header>
+	
+	
+		<main>
+			<div id="form" class="mainText">
+		
+				<table id="tableOne">
+				
+					<tr><td>Name:</td><td><input type="text" class="textInput" id="nameOneInput" placeholder="eg. Bob"></td></tr>
+					<tr><td>Adjective:</td><td><input type="text" class="textInput" id="adjectiveOneInput" placeholder="A describing word"></td></tr>
+					<tr><td>Place:</td><td><input type="text" class="textInput" id="placeOneInput" placeholder="eg. the bus"></td></tr>
+					<tr><td>Day:</td><td><input type="text" class="textInput" id="dayOneInput" placeholder="eg. Thursday"></td></tr>
+					<tr><td>Time:</td><td><input type="text" class="textInput" id="timeOneInput" placeholder="eg. lunch time"></td></tr>
+					<tr><td>Verb:</td><td><input type="text" class="textInput" id="verbOneInput" placeholder="A doing word"></td></tr>
+					<tr><td>Noun:</td><td><input type="text" class="textInput" id="nounOneInput" placeholder="A thing"></td></tr>
+					<tr><td>Adjective:</td><td><input type="text" class="textInput" id="adjectiveTwoInput" placeholder="A describing word"></td></tr>
+					<tr><td>Noun:</td><td><input type="text" class="textInput" id="nounTwoInput" placeholder="A thing"></td></tr>
+					<tr><td>Name:</td><td><input type="text" class="textInput" id="nameTwoInput" placeholder="eg. Bobert"></td></tr>
+					<tr><td></td><td><input type="button" id="buttonOne" value="PING!"></td></tr>
+				</table>
+				
+				<p id="errorMessage"></p>
+				
+			</div>
+		
+	
+			<div id="madlibsText" class="mainText">
+			
+				<p>Dear <span id="nameOne" class="bold">.name.</span>,</p>
+				<br>
+				<p>I am excited to invite you to a super <span id="adjectiveOne" class="bold">.adj.</span> birthday party.</p>
+				<p>I am having it at <span id="placeOne" class="bold">.place.</span>, on <span id="dayOne" class="bold">.day.</span>.</p>
+				<p>Please arrive at <span id="timeOne" class="bold">.time.</span>. If you turn up late, you will be forced to <span id="verbOne" class="bold">.verb.</span> a <span id="nounOne" class="bold">.noun.</span> with your <span id="adjectiveTwo" class="bold">.adj2.</span> <span id="nounTwo" class="bold">.noun.</span>.</p>
+				<p>Hope to see you there.</p>
+				<p>From <span id="nameTwo" class="bold">.name.</span></p>
+						
+			</div>
+		
+		</main>
+		
+		<footer>
+			<div id="footer">
+			
+			<p class="footerText">Click <a href="ChristmasMenuForm.html">here</a> for the survey.					&copy Kate Brown 2019 </p>
+			
+			
+			</div>
+			
+		
+		
+		
+		
+		</footer>
+		
+		<script type="text/javascript">
+	
+	document.getElementById("madlibsText").style.display = "none";
+		
+		document.getElementById("buttonOne").onclick = function (){
+			var nameOneText = "";
+			nameOneText = document.getElementById("nameOneInput").value;
+			document.getElementById("nameOne").innerHTML = nameOneText;
+			
+			
+			var adjectiveOneText = "";
+			adjectiveOneText = document.getElementById("adjectiveOneInput").value;
+			document.getElementById("adjectiveOne").innerHTML = adjectiveOneText;
+			
+			
+			var placeOneText = "";
+			placeOneText = document.getElementById("placeOneInput").value;
+			document.getElementById("placeOne").innerHTML = placeOneText;
+			
+			
+			var dayOneText = "";
+			dayOneText = document.getElementById("dayOneInput").value;
+			document.getElementById("dayOne").innerHTML = dayOneText;
+		
+		
+			var timeOneText = "";
+			timeOneText = document.getElementById("timeOneInput").value;
+			document.getElementById("timeOne").innerHTML = timeOneText;
+	
+	
+			var verbOneText = "";
+			verbOneText = document.getElementById("verbOneInput").value;
+			document.getElementById("verbOne").innerHTML = verbOneText;
+			
+			
+			var nounOneText = "";
+			nounOneText = document.getElementById("nounOneInput").value;
+			document.getElementById("nounOne").innerHTML = nounOneText;
+			
+			
+			var adjectiveTwoText = "";
+			adjectiveTwoText = document.getElementById("adjectiveTwoInput").value;
+			document.getElementById("adjectiveTwo").innerHTML = adjectiveTwoText;
+			
+			
+			var nounTwoText = "";
+			nounTwoText = document.getElementById("nounTwoInput").value;
+			document.getElementById("nounTwo").innerHTML = nounTwoText;
+			
+			
+			var nameTwoText = "";
+			nameTwoText = document.getElementById("nameTwoInput").value;
+			document.getElementById("nameTwo").innerHTML = nameTwoText;
+			
+
+			
+			
+			if (nameOneText == ""|| adjectiveOneText == "" || placeOneText == "" || dayOneText == "" || timeOneText == "" || verbOneText == "" || nounOneText == "" || adjectiveTwoText == "" || nounTwoText == "" || nameTwoText == "")
+				{
+				document.getElementById("errorMessage").innerHTML = "Error. One or more fields are empty. Please fill in all of the text boxes.";
+				}
+				
+			else {
+				document.getElementById("madlibsText").style.display = "initial";
+				document.getElementById("errorMessage").innerHTML = "";
+				}
+		}
+	
+	</script>
+	
+
+	</body>
+	
+	
+</html>
