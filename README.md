@@ -1,5 +1,5 @@
 # MadLibs
-kateeliza.github.io/madLibs
+kateeliza29.github.io/madLibs
 
 ## Introduction
 Made in November 2019, this is a simple MadLibs game. 
